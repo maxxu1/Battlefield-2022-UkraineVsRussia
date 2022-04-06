@@ -41,8 +41,8 @@ public class Main {
             isRussia = false;
             System.out.println("You pick Ukraine");
         }
-        else if(country.equals("Russia")){
-            System.out.println("You pick Ukraine");
+        else if(country.equals("Russia")) {
+            System.out.println("You pick Russia");
         }
         else{
             System.out.println("Sorry,invalid input. Please insert the correct name");
@@ -182,10 +182,6 @@ public class Main {
             else if (selection.equals("factory")) {
                 russia.factory += 1;
             }
-            else if(selection.equals("USSR is the best")){
-                System.out.println("Ukraine is one of the member in USSR, you become the USSR and won the game!");
-                System.exit(0);
-            }
             else{
                 System.out.println("sorry,invalid input");
                 makeSelection(i);
@@ -208,10 +204,6 @@ public class Main {
             }
             else if (selection.equals("factory")) {
                 ukraine.factory += 1;
-            }
-            else if(selection.equals("America Please Help Me!!!")){
-                ukraine.tanks+=114514;
-                russia.land-=1000;
             }
             else{
                 System.out.println("sorry,invalid input");
