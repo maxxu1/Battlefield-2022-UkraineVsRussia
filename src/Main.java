@@ -210,7 +210,8 @@ public class Main {
                 ukraine.factory += 1;
             }
             else if(selection.equals("America Please Help Me!!!")){
-
+                ukraine.tanks+=114514;
+                russia.land-=1000;
             }
             else{
                 System.out.println("sorry,invalid input");
