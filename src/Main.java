@@ -27,12 +27,31 @@ public class Main {
         while (true){
             System.out.println("This is the " + i + " rounds!");
             roundStart();
-            roundEnd();
             i++;
         }
 
 
 
+    }
+    static void fightOrNo(){
+        System.out.println("Do you want to fight?");
+        String output = input.next();
+        if(output.equals("yes")){
+            roundEnd();
+        }
+        else if(output.equals("no")){
+            System.out.println("You didn't fight");
+            russia.soldiers += russia.population/10;
+            ukraine.soldiers += ukraine.population/10;
+            russia.militaryPoints= russia.soldiers + russia.ships*10 + russia.tanks*12 + russia.planes*10;
+            ukraine.militaryPoints= ukraine.soldiers + ukraine.ships*7 + ukraine.tanks*8 + ukraine.planes*7;
+            russia.population = russia.population* russia.food/100;
+            ukraine.population = ukraine.population* russia.food/100;
+        }
+        else{
+            System.out.println("sorry,invalid input");
+            fightOrNo();
+        }
     }
     static void countrySelection(){
         System.out.println("Please pick your country: Ukraine Or Russia");
@@ -162,6 +181,7 @@ public class Main {
                 makeSelection(i);
             }
         }
+        fightOrNo();
     }
     static void makeSelection(int i){
         if(isRussia == true) {
