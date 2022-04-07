@@ -16,6 +16,7 @@ public class Main {
         ukraine.factory =1;
         ukraine.land = 60;
         countrySelection();
+        signIn();
         for(int i=1;i<4;i++){
             System.out.println("This is the " + i + " rounds!");
             roundStart();
@@ -32,6 +33,26 @@ public class Main {
 
 
 
+    }
+    static void signIn(){
+        System.out.println("Please insert your name(better be real name)");
+        String name = input.next();
+        if(name.equals("May") || name.equals("may") || name.equals("may k") || name.equals("May K.")){
+            System.out.println("Welcome May, ur country is buffed cuz im not sure u gonna win without the buff lol");
+            if(isRussia==true)
+                russia.militaryPoints +=100000;
+            else {
+                russia.land-=1000;
+                ukraine.militaryPoints+=100000;
+            }
+        }
+        else if(name.equals("Elvin") || name.equals("elvin") || name.equals("Elvin Xu")){
+            System.out.println("Ok elvin u finally joined my game lmao");
+
+        }
+        else{
+            System.out.println("Undocumented player, welcome to contact to the author for documenting the name in code");
+        }
     }
     static void fightOrNo(){
         System.out.println("Do you want to fight?");
