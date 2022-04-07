@@ -61,6 +61,7 @@ public class Main {
             System.out.println("You pick Ukraine");
         }
         else if(country.equals("Russia")) {
+            isRussia = true;
             System.out.println("You pick Russia");
         }
         else{
